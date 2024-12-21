@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+     </head>
+<body>
+    <h3>Contact</h3>
+    <form action="">
+        <div class="clearfix">
+            <input id="fname" class="col2 first" type="text" placeholder="FirstName">
+            <input id="lname" class="col2 first" type="text" placeholder="LastName">
+        </div>
+        <div class="clearfix">
+            <input id="email" class="col2 first" type="text" placeholder="Email">
+            <input id="mobile" class="col2 first" type="text" placeholder="Contact Number">
+        </div>
+        <div class="clearfix">
+            <textarea name="textarea" id="message" cols="30" rows="7" placeholder="Your message is here..."></textarea>
+        </div>
+        <div><input onclick="newEnquiry()" type="submit" value="Send"></div>
+    </form>
+<script>
+    function newEnquiry(){
+      let fname = document.getElementById("fname").value;
+      let lname = document.getElementById("lname").value;
+      let email = document.getElementById("email").value;
+      let mobile = document.getElementById("mobile").value;
+      let msg = document.getElementById("message").value;
+
+       let url="https://wa.me/917013318604?text="
+       + "Name of the Customer: " + fname +" "+ lname + "%0a" + "%0a"
+       +"Phone No:" +mobile+ "%0a"
+       +"Email ID:" +email+ "%0a"
+       +"Message from Customer:"+msg;
+
+       window.open(url).focus();
+    }
+</script>
+
+
+</body>
+</html>
